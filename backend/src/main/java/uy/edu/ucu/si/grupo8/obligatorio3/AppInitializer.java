@@ -9,7 +9,7 @@ import java.util.TimeZone;
 @SpringBootApplication
 public class AppInitializer {
 
-    @PostConstruct
+   @PostConstruct
     public void init() {
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
     }

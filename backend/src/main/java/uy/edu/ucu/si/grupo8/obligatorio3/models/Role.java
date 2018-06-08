@@ -1,8 +1,6 @@
 package uy.edu.ucu.si.grupo8.obligatorio3.models;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 import uy.edu.ucu.si.grupo8.obligatorio3.models.abstracts.AbstractBaseAuditableEntity;
 
 import javax.persistence.Entity;
@@ -13,6 +11,8 @@ import javax.persistence.Table;
 @Data
 @Builder
 @EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 public class Role extends AbstractBaseAuditableEntity<Long> {
 
     private String Name;
