@@ -1,4 +1,4 @@
-package uy.edu.ucu.si.grupo8.obligatorio3.exceptions;
+package uy.edu.ucu.si.grupo8.obligatorio3.exceptions.rest;
 
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import org.springframework.http.HttpStatus;
