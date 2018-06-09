@@ -47,8 +47,8 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<ResponseAPI> handleGenericException() throws IOException {
-        final ResponseAPI responseAPI = error("No se pudo recuperar la receta");
+    public ResponseEntity<ResponseAPI> handleGenericException(final Exception exception) throws IOException {
+        final ResponseAPI responseAPI = error("Upss algo ocurrio!!!");
         return status(HttpStatus.INTERNAL_SERVER_ERROR).body(responseAPI);
     }
 

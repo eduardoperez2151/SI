@@ -1,4 +1,4 @@
-package uy.edu.ucu.si.grupo8.obligatorio3.controllers;
+/*package uy.edu.ucu.si.grupo8.obligatorio3.controllers;
 
 import java.io.IOException;
 import java.util.stream.Collectors;
@@ -62,4 +62,4 @@ public class FileUploadController {
         return "redirect:/";
     }
 
-}
+}*/

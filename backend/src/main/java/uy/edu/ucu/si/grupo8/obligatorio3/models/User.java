@@ -1,4 +1,5 @@
 package uy.edu.ucu.si.grupo8.obligatorio3.models;
+
 import lombok.*;
 import uy.edu.ucu.si.grupo8.obligatorio3.models.abstracts.AbstractBaseAuditableEntity;
 
@@ -7,7 +8,6 @@ import java.util.List;
 
 @Entity
 @Table(name = "users")
-@Builder
 @Data
 @EqualsAndHashCode
 @AllArgsConstructor
@@ -18,8 +18,16 @@ public class User extends AbstractBaseAuditableEntity<Long> {
     private String username;
     private String email;
     private Boolean active;
-    private String activationToken;
-    private String passwordResetToken;
+
+    @Builder
+    public User(final Long id, final String password, final String username, final String email, final Boolean active, final List<Role> roles) {
+        this.id = id;
+        this.password = password;
+        this.username = username;
+        this.email = email;
+        this.active = active;
+        this.roles = roles;
+    }
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),

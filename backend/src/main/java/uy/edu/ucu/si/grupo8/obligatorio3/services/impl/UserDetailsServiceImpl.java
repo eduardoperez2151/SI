@@ -1,4 +1,4 @@
-package uy.edu.ucu.si.grupo8.obligatorio3.services;
+package uy.edu.ucu.si.grupo8.obligatorio3.services.impl;
 
 
 import org.springframework.security.core.GrantedAuthority;
@@ -14,11 +14,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-public class AppUserDetailsService implements UserDetailsService {
-    
+public class UserDetailsServiceImpl implements UserDetailsService {
+
     private final UserRepository userRepository;
 
-    public AppUserDetailsService(final UserRepository userRepository) {
+    public UserDetailsServiceImpl(final UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
